@@ -72,4 +72,23 @@ public main(){
   Empleado eVigilante = Vigilante();
 }
 ```
-Estamos haciendo algo simple de entender si lo enfocamos en la realidad. En este código le estamos diciendo al programa "Oye, quiero que crees un Empleado que se llame *eJefe* que dentro de él guardes todas las caracteristicas que tiene un Jefe". A lo que el programa responde: "Crearé un nuevo Empleado y este empleado 
+Estamos haciendo algo simple de entender si lo enfocamos en la realidad. En este código le estamos diciendo al programa "Oye, quiero que crees un Empleado que se llame *eJefe* y dale las caracteristicas que tiene un Jefe. También crea otro que se llame *eVigilante* y a este dale todas las caracteristicas de un Vigilante". Básicamente estamos, por así decirlo, clasificando a cada uno por su ocupación, pero sin sacarlo de su clasificación general: Ambos son *empleados*.  
+  
+Ya tenemos lo mas importante, ahora viene la lógica.  
+Nosotros queremos indicar cual es el sueldo de cada empleado usando su ocupación como referencia. Para esto podríamos codificar lo siguente:
+  
+**JAVA**
+```java
+public class MetodoPagar {
+  public void pagar(Empleado e) {
+    if(e instanceof Jefe) {
+      System.out.printl("JEFE: Usted recibe $100");
+    } else if(e instanceof Vigilante) {
+      System.out.printl("Vigilante: Usted recibe $50");
+    }
+  }
+} 
+```
+
+Un ejemplo más sencillo de comprender es decir que tenemos un conjunto camisetas. Este conjunto de camisetas las clasificamos por colores claros y colores oscuros. Al separarlas por el tipo de color ya estariamos creando las clases hijas (podríamos llamarlas ColorClaro y ColorOscuro) con sus propias caracteristicas. Sin embargo, al ser todas camisetas, todas pertenecen a su clase padre (a la cual podemos darle el nombre de Camiseta), por lo cual **TODAS** son camisetas.  
+Bueno ya las tenemos clasificadas y sabemos a dónde pertenecen. Pero falta algo. En un caso super hipotetico (digo así porque ¿quién no va a saber hacer eso?) en el que queremos saber cuales camisas se pueden lavar con clorox y cuales no, es necesario consultar primero si la camisa soporta el clorox o no. 
