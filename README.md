@@ -17,6 +17,7 @@ public class Empleado {
 **Dart**
 ```dart
 class Empleado {
+  int sueldo = 0;
 }
 ```
 Esta clase tiene solamente un atributo: un entero llamado **sueldo** en el cual, obviamente, guardaremos mas adelante el sueldo de los empleados que vayamos creando. La llamamos clase **PADRE** porque de esta clase se van a **EXTENDER** todas las clases a las que le deseemos indexar el polimorfismo.  
@@ -67,7 +68,7 @@ public class ClasePrincipal {
 ```
 **Dart**
 ```dart
-public main(){
+void main(){
   Empleado eJefe = Jefe();
   Empleado eVigilante = Vigilante();
 }
@@ -77,7 +78,7 @@ Estamos haciendo algo simple de entender si lo enfocamos en la realidad. En este
 Ya tenemos lo mas importante, ahora viene la lógica.  
 Nosotros queremos indicar cual es el sueldo de cada empleado usando su ocupación como referencia. Para esto podríamos codificar lo siguente:
   
-**JAVA**
+**Java**
 ```java
 public class MetodoPagar {
   public void pagar(Empleado e) {
@@ -88,6 +89,16 @@ public class MetodoPagar {
     }
   }
 } 
+```
+**Dart**
+```dart
+void pagar(Empleado e) {
+  if(e is Vigilante) {
+    print('JEFE: Usted recibe: \$100');
+  } else if(e is Jefe) {
+    print("VIGILANTE: Usted recibe: \$50");
+  }
+}
 ```
 
 Un ejemplo más sencillo de comprender es decir que tenemos un conjunto camisetas. Este conjunto de camisetas las clasificamos por colores claros y colores oscuros. Al separarlas por el tipo de color ya estariamos creando las clases hijas (podríamos llamarlas ColorClaro y ColorOscuro) con sus propias caracteristicas. Sin embargo, al ser todas camisetas, todas pertenecen a su clase padre (a la cual podemos darle el nombre de Camiseta), por lo cual **TODAS** son camisetas.  
