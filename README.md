@@ -104,3 +104,71 @@ void pagar(Empleado e) {
 Lo que hacemos aquí es simple. Primero estamos creando un método llamado ***pagar*** y le estamos diciendo que reciba como parámetro un empleado y lo guarde en una variable ***e***. Después, en la funcionalidad, le estamos pidiendo por medio de un *if* que verifique si el empleado *e* es un Jefe o, en otras palabras, que verifique si *e* es un **OBJETO EMPLEADO** que guarda los atributos de la **CLASE JEFE**. De ser verdadero, entonces que imprima en consola: "JEFE: Usted recibe: \$100". De ser falso, por otra parte, que verifique si el empleado es un vigilante o si el **OBJETO EMPLEADO** *e* es una instancia de la **CLASE VIGILANTE**. Ya con todo esto podemos ejecutar el programa y ver su resultado.  
 
 **Código completo Java**
+```java
+public class Empleado {
+  int sueldo = 0;  
+}
+
+public class Vigilante extends Empleado{
+}
+
+public class Jefe extends Empleado{
+}
+
+public class MetodoPagar {
+  public void pagar(Empleado e) {
+    if(e instanceof Jefe) {
+      System.out.printl("JEFE: Usted recibe $100");
+    } else if(e instanceof Vigilante) {
+      System.out.printl("Vigilante: Usted recibe $50");
+    }
+  }
+} 
+
+public class ClasePrincipal {
+  public static void main(String args[]) {
+    Empleado eJefe = new Jefe();
+    Empleado eVigilante = new Vigilante();
+    
+    MetodoPagar mpg = new MetodoPagar();
+    mpg.pagar(eJefe);
+    mpg.pagar(eVigilante);
+  }
+}
+```
+**Código completo Dart**
+
+```dart
+class Empleado {
+  int sueldo = 0;
+}
+
+class Vigilante extends Empleado{
+}
+
+class Jefe extends Empleado{
+}
+
+void main(){
+  Empleado eJefe = Jefe();
+  Empleado eVigilante = Vigilante();
+  
+  pagar(eJefe);
+  pagar(eVigilante);
+}
+
+void pagar(Empleado e) {
+  if(e is Vigilante) {
+    print('JEFE: Usted recibe: \$100');
+  } else if(e is Jefe) {
+    print("VIGILANTE: Usted recibe: \$50");
+  }
+}
+
+```
+
+Consola:
+```console
+VIGILANTE: Usted recibe: $50
+JEFE: Usted recibe: $100
+```
