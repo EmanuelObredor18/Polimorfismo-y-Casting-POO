@@ -101,5 +101,6 @@ void pagar(Empleado e) {
 }
 ```
 
-Un ejemplo más sencillo de comprender es decir que tenemos un conjunto camisetas. Este conjunto de camisetas las clasificamos por colores claros y colores oscuros. Al separarlas por el tipo de color ya estariamos creando las clases hijas (podríamos llamarlas ColorClaro y ColorOscuro) con sus propias caracteristicas. Sin embargo, al ser todas camisetas, todas pertenecen a su clase padre (a la cual podemos darle el nombre de Camiseta), por lo cual **TODAS** son camisetas.  
-Bueno ya las tenemos clasificadas y sabemos a dónde pertenecen. Pero falta algo. En un caso super hipotetico (digo así porque ¿quién no va a saber hacer eso?) en el que queremos saber cuales camisas se pueden lavar con clorox y cuales no, es necesario consultar primero si la camisa soporta el clorox o no. 
+Lo que hacemos aquí es simple. Primero estamos creando un método llamado ***pagar*** y le estamos diciendo que reciba como parámetro un empleado y lo guarde en una variable ***e***. Después, en la funcionalidad, le estamos pidiendo por medio de un *if* que verifique si el empleado *e* es un Jefe o, en otras palabras, que verifique si *e* es un **OBJETO EMPLEADO** que guarda los atributos de la **CLASE JEFE**. De ser verdadero, entonces que imprima en consola: "JEFE: Usted recibe: \$100". De ser falso, por otra parte, que verifique si el empleado es un vigilante o si el **OBJETO EMPLEADO** *e* es una instancia de la **CLASE VIGILANTE**. Ya con todo esto podemos ejecutar el programa y ver su resultado.  
+
+**Código completo Java**
