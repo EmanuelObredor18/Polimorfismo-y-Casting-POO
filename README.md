@@ -130,7 +130,7 @@ public class ClasePrincipal {
     Empleado eVigilante = new Vigilante();
     
       /* Creamos una instancia de la clase MetodoPagar. Llamamos y ejecutamos el método 
-      pagar de la clase y pasamos como parámetros el objeto 'eJefe' y el objeto 'eVigilante' */
+      pagar y pasamos como parámetros el objeto 'eJefe' y el objeto 'eVigilante' */
 
     MetodoPagar mpg = new MetodoPagar();
     mpg.pagar(eJefe);
@@ -163,7 +163,7 @@ void main(){
   Empleado eJefe = Jefe();
   Empleado eVigilante = Vigilante();
   
-  /*Llamamos y ejecutamos el método pagar de la clase pasando como parámetros los objetos
+  /*Llamamos y ejecutamos el método pagar pasando como parámetros los objetos
   que creamos anteriormente */
 
   pagar(eJefe);
