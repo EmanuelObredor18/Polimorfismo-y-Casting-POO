@@ -101,7 +101,7 @@ void pagar(Empleado e) {
 }
 ```
 
-Lo que hacemos aquí es simple. Primero estamos creando un método llamado ***pagar*** y le estamos diciendo que reciba como parámetro un empleado y lo guarde en una variable ***e***. Después, en la funcionalidad, le estamos pidiendo por medio de un *if* que verifique si el empleado *e* es un Jefe o, en otras palabras, que verifique si *e* es un **OBJETO EMPLEADO** que guarda los atributos de la **CLASE JEFE**. De ser verdadero, entonces que imprima en consola: "JEFE: Usted recibe: \$100". De ser falso, por otra parte, que verifique si el empleado es un vigilante o si el **OBJETO EMPLEADO** *e* es una instancia de la **CLASE VIGILANTE**. Ya con todo esto podemos ejecutar el programa y ver su resultado.  
+Lo que hacemos aquí es simple. Primero estamos creando un método llamado ***pagar*** y le decimos que reciba como parámetro un empleado y lo guarde en una variable ***e***. Después, en la funcionalidad, le estamos pidiendo por medio de un *if* que verifique si el empleado *e* es un Jefe o, en otras palabras, que verifique si *e* es un **OBJETO EMPLEADO** que guarda los atributos de la **CLASE JEFE**. De ser verdadero, entonces que imprima en consola: "JEFE: Usted recibe: \$100". De ser falso, por otra parte, que verifique si el empleado es un vigilante o si el **OBJETO EMPLEADO** *e* es una instancia de la **CLASE VIGILANTE**. Ya con todo esto podemos ejecutar el programa y ver su resultado.  
 
 **Código completo Java**
 ```java
